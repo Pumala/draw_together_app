@@ -13,17 +13,18 @@
       }
       #canvas {
         border: 1px solid indigo;
+        /*background-color: pink;*/
       }
     </style>
   </head>
   <body>
 
   <div class="container">
-    <canvas id="canvas" width="300" height="300"></canvas>
+    <canvas id="canvas" width="300" height="300" background-color="#ffffff"></canvas>
     <p id="message"></p>
-    <input type="color" id="colorPicker" value="#000000">
+    <input type="color" id="colorPicker" value="#ffffff">
     <input type="number" id="penThickness" value="2">
-    <input type="button" id="erase" name="Erase" value="Erase">
+    <input type="button" id="eraser" name="Erase" value="Erase">
   </div>
 
     <script src="/socket.io/socket.io.js" charset="utf-8"></script>
