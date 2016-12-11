@@ -3,29 +3,66 @@
   <head>
     <meta charset="utf-8">
     <title>Drawing Together App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <style media="screen">
       body {
         cursor: default;
       }
+      .clear:before, .clear:after {
+        display: table;
+        content: "";
+      }
+      .clear:after {
+        clear: both;
+      }
+      .colorStyles {
+        text-align: center;
+        display: inline-block;
+      }
       .container {
-        max-width: 500px;
+        /*max-width: 600px;*/
         margin: auto;
       }
       #canvas {
         border: 1px solid indigo;
       }
+      #penThickness {
+        width: 50px;
+      }
     </style>
   </head>
   <body>
 
-  <div class="container">
+  <div class="container text-center">
+    <h1>Draw Together App</h1>
+
+    <div class="row">
+      <div class="form-group colorStyles clear">
+        <div class="pull-left">
+          <label for="">Pen Color:</label><br>
+          <input type="color" id="colorPicker" value="#000000">
+        </div>
+        <div class="pull-left">
+          <label for="">Pen Thickness:</label><br>
+          <input type="number" id="penThickness" value="2">
+        </div>
+        <div class="pull-left">
+          <input type="button" id="eraser" name="Erase" value="Eraser">
+        </div>
+        <div class="pull-left">
+          <input type="button" name="backgroundColor" value="Background Color"><br>
+          <input type="color" id="backgroundColorPicker" value="#ffffff">
+        </div>
+      </div>
+    </div>
+
     <canvas id="canvas" width="300" height="300" background-color="#ffffff"></canvas>
     <p id="message"></p>
-    <input type="color" id="colorPicker" value="#000000">
+    <!-- <input type="color" id="colorPicker" value="#000000">
     <input type="number" id="penThickness" value="2">
     <input type="button" id="eraser" name="Erase" value="Erase">
     <input type="button" name="backgroundColor" value="Background Color">
-    <input type="color" id="backgroundColorPicker" value="#ffffff">
+    <input type="color" id="backgroundColorPicker" value="#ffffff"> -->
   </div>
 
     <script src="/socket.io/socket.io.js" charset="utf-8"></script>
