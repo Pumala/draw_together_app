@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Drawing Together App</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="screen" title="no title">
     <style media="screen">
       body {
         cursor: default;
@@ -47,10 +48,13 @@
           <input type="number" id="penThickness" value="2">
         </div>
         <div class="pull-left">
-          <input type="button" id="eraser" name="Erase" value="Eraser">
+          <div id="eraser" class="btn btn-default">
+            <i class="fa fa-eraser fa-lg" aria-hidden="true"></i>
+          </div>
+          <!-- <input type="button" id="eraser" name="Erase" value="Eraser"> -->
         </div>
         <div class="pull-left">
-          <input type="button" name="backgroundColor" value="Background Color"><br>
+          <label for="">Background Color:</label><br>
           <input type="color" id="backgroundColorPicker" value="#ffffff">
         </div>
       </div>
