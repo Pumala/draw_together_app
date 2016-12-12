@@ -1,0 +1,24 @@
+body {
+  cursor: default;
+}
+.clear:before, .clear:after {
+  display: table;
+  content: "";
+}
+.clear:after {
+  clear: both;
+}
+.colorStyles {
+  text-align: center;
+  display: inline-block;
+}
+.container {
+  /*max-width: 600px;*/
+  margin: auto;
+}
+#canvas {
+  border: 5px solid indigo;
+}
+#penThickness {
+  width: 50px;
+}
